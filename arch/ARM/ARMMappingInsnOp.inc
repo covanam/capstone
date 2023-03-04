@@ -1223,7 +1223,7 @@
 	{ CS_AC_WRITE, CS_AC_READ, 0 }
 },
 {	/* ARM_UXTB, ARM_INS_UXTB: uxtb${p}	$rd, $rm$rot */
-	{ CS_AC_WRITE, 0 }
+	{ CS_AC_WRITE, CS_AC_READ, 0 }
 },
 {	/* ARM_UXTB16, ARM_INS_UXTB16: uxtb16${p}	$rd, $rm$rot */
 	{ CS_AC_WRITE, 0 }
@@ -6404,7 +6404,7 @@
 	{ CS_AC_WRITE, CS_AC_READ, 0 }
 },
 {	/* ARM_t2UXTB, ARM_INS_UXTB: uxtb${p}.w	$rd, $rm$rot */
-	{ CS_AC_WRITE, 0 }
+	{ CS_AC_WRITE, CS_AC_READ, 0 }
 },
 {	/* ARM_t2UXTB16, ARM_INS_UXTB16: uxtb16${p}	$rd, $rm$rot */
 	{ CS_AC_WRITE, 0 }
