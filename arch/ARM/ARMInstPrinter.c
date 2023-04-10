@@ -747,12 +747,13 @@ void ARM_printInst(MCInst *MI, SStream *O, void *Info)
 							 if (MI->csh->detail) {
 								 MI->flat_insn->detail->arm.operands[MI->flat_insn->detail->arm.op_count].type = ARM_OP_REG;
 								 MI->flat_insn->detail->arm.operands[MI->flat_insn->detail->arm.op_count].reg = BaseReg;
-								 MI->flat_insn->detail->arm.operands[MI->flat_insn->detail->arm.op_count].access = CS_AC_READ | CS_AC_WRITE;
+								 MI->flat_insn->detail->arm.operands[MI->flat_insn->detail->arm.op_count].access = CS_AC_READ;
 								 MI->flat_insn->detail->arm.op_count++;
 							 }
 							 if (Writeback) {
 								 MI->writeback = true;
 								 SStream_concat0(O, "!");
+								 MI->flat_insn->detail->arm.operands[MI->flat_insn->detail->arm.op_count].access |= CS_AC_WRITE;
 							 }
 							 SStream_concat0(O, ", ");
 							 printRegisterList(MI, 3, O);
